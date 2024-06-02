@@ -1,5 +1,5 @@
 # Professional Engineer and Data Scientist
-![About](/assets/img/about.jpg}
+![About](/assets/img/about.jpg)
 ### Education
 MIT xPRO, Professional Certificate in Data Science and Analytics
 Virginia Tech, Mining Engineering, PhD, MS, and BS
