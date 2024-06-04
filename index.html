@@ -10,19 +10,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
-    /* Sticky navigation bar */
-		.navbar {
-			position: sticky;
-			top: 0;
-			width: 100%;
-			z-index: 1000; /* Ensure it's on top of other content */
-		}
-		body {
-		position: relative;
-    }
-    section {
-      padding: 0px 0;
-		}
+        /* Sticky navigation bar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        body {
+            position: relative;
+        }
+        section {
+            padding: 30px 0;
+        }
         .about-section {
             padding: 30px 0;
             text-align: left;
@@ -33,8 +33,9 @@
             font-weight: bold;
         }
         .about-section .profile-img {
-            width: 230px;
-            height: 230px;
+            width: 100%;
+            max-width: 230px;
+            height: auto;
             border-radius: 50%;
             border: 5px solid #333;
             margin-bottom: 10px;
@@ -42,30 +43,26 @@
         .about-section .text-content {
             max-width: 600px;
         }
-		.about-section .text-small {
+        .about-section .text-small {
             font-size: 0.75em;
-			max-width: 600px;
+            max-width: 600px;
         }
         .project-section {
-            background-color: #FAF9F6; /* Off-white color */
-  <!-- 		max-width: 1000px; -->
-		}
-		.project-section h2 {
-
+            background-color: #FAF9F6;
+        }
+        .project-section h2 {
             font-size: 2.5rem;
             font-weight: bold;
         }
         .skills-section {
-  <!--      background-color: #FAF9F6; /* Off-white color */	
-			max-width: 1000px; -->
-		}
+        }
         .skills-section h2 {
             font-size: 2.5rem;
             font-weight: bold;
         }
         .contact-section {
-            background-color: #2e2e2e; /* Dark gray background */
-            padding: 0 px;
+            background-color: #2e2e2e;
+            padding: 30px 0;
             color: white;
         }
         .btn-circle {
@@ -78,79 +75,71 @@
             margin: 5px;
         }
         .btn-silver {
-            background-color: #c0c0c0; /* Silver color */
+            background-color: #c0c0c0;
             color: white;
         }
         .btn-silver:hover {
-            background-color: #a0a0a0; /* Darker silver on hover */
+            background-color: #a0a0a0;
             color: white;
         }
         .social-icon {
             width: 24px;
             height: 24px;
         }
-		.thumbnail-img {
+        .thumbnail-img {
             width: 100px;
             height: 120px;
-			border: none;
+            border: none;
             justify-content: center;
         }
         .thumbnail-text {
             font-size: 0.75rem;
             margin-left: 5px;
         }
-		.thumbnail-link {
+        .thumbnail-link {
             text-decoration: none;
             border: none;
-			color: inherit;
+            color: inherit;
         }
-<!--		.thumbnail-cell {
-            width: 100px;
-            height: 100px;
-            text-align: center;
-            vertical-align: middle;
-		        }
--->
         .thumbnail-cell {
             width: 120px;
             height: 120px;
             justify-content: center;
             align-items: center;
         }
-
-        }
         .thumbnail-wrapper {
             display: inline-block;
         }
-		.row-cell {
+        .row-cell {
             width: 100%;
             display: flex;
             align-items: center;
-            margin-bottom: 10px; /* Added margin-bottom for spacing */
+            margin-bottom: 10px;
         }
         .row-img {
             width: 100px;
             height: 150px;
             margin-right: 10px;
-			object-fit: cover;
-			border: none;
-		        }
+            object-fit: cover;
+            border: none;
+        }
         .row-img2 {
-            width: 400px;
-            height: 200;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
             margin-right: 10px;
-			object-fit: cover;
-			border: none;
+            object-fit: cover;
+            border: none;
         }
         .row-text {
             text-decoration: none;
             color: inherit;
             font-size: 1rem;
-			padding: 0px;
+            padding: 0px;
             display: inline-block;
             vertical-align: top;
         }
-		.row-description {
+        .row-description {
             font-size: 0.8rem;
             margin-top: 5px;
             text-align: center;
@@ -171,9 +160,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#home">Home</a>
           </li>
- <!--         <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="#projects">Projects</a>
           </li>
@@ -189,329 +175,102 @@
   </nav>
 
   <!-- Your content sections -->
- <section id="home">
-   <div class="container">
-  <!--         <h1>Home Section</h1>
-      <p>Welcome to my portfolio website!</p>-->
+  <section id="home">
+    <div class="container">
     </div>
   </section>  
 
   <!-- About Section -->
   <section id="about" class="about-section">
     <div class="container">
-  <!--      <h2>About</h2> -->
-    <table border="0">
-        <tr>
-            <td colspan="3"><img src="images/about/about.jpg" alt="Profile Image" class="profile-img">
-        <div class="text-small">
-		<ul>
-  <li>Registered Professional Engineer</li>
-  <li>Data Scientist </li> 
-  <li>Python, Excel, PowerQuery, SQL </li> 
-		</td>
-            <td>
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</p>
-			</td>
-            <td>
-        <div class="text-content">
-			<p><b> Welcome to my portfolio! </b> I am continuing to add exciting personal projects that I work on in my spare time. I have been 1.5 miles underground vertically into the earth and guess what I found? Data, data, and more data! Most of my career as an engineer has been spent working under confidentiality agreements. I am a registered Professional Engineer (NC, FL, and LA) with demonstrated success utilizing a diverse set of software suites and technologies to design, implement, and analyze operational and engineering data in mining, civil, and environmental applications. 
-			</p>
-			<p><b>Want to Collab?</b> Great! I have a strong background of research, production, engineering, consulting, and customer service which enables me to analyze complex problems, develop and implement solutions, evaluate the process with measurable parameters, develop content, and present findings to all technical levels. Let's get the job done.
-			</p>
-			</td>
-        </tr>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img src="images/about/about.jpg" alt="Profile Image" class="profile-img mb-3">
+          <div class="text-small">
+            <ul class="list-unstyled">
+              <li>Registered Professional Engineer</li>
+              <li>Data Scientist</li> 
+              <li>Python, Excel, PowerQuery, SQL</li> 
+            </ul>
+          </div>
         </div>
-
-</table>
- </div>
-    </section>
-
-    <!-- Projects Section -->
-	<section id="projects">
-    <div class="container">
-    <section class="project-section py-3">
-
-        <div class="container">
-            <h2 class="text-left mb-3">&nbsp; Projects</h2>
-			    <div class="container mt-3">
-    <div class="container mt-3">
-        <table class="table table-bordered">
-		    <table border="0">
-            <tr>
-                <td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/1.jpeg" class="img-thumbnail thumbnail-img" alt="Thumbnail 1">
-                        <div class="thumbnail-text">Claire's Paw Tracker<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/2.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 2">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/3.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 3">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/4.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 4">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-<!--				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/2.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 5">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/3.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 6">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/4.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 7">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
--->
-            </tr>
-            <tr>
-                <td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/2.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 8">
-                        <div class="thumbnail-text">Upcoming<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/3.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 9">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/4.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 10">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/2.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 11">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-<!--				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/3.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 12">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/4.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 13">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
-				<td class="thumbnail-cell">
-                    <a href="#" class="thumbnail-link thumbnail-wrapper">
-                        <img src="images/projects/2.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 14">
-                        <div class="thumbnail-text">Upcoming...<br><br></div>
-                    </a>
-                </td>
--->
-            </tr>
-        </table>
+        <div class="col-md-8">
+          <div class="text-content">
+            <p><b> Welcome to my portfolio! </b> I am continuing to add exciting personal projects that I work on in my spare time. I have been 1.5 miles underground vertically into the earth and guess what I found? Data, data, and more data! Most of my career as an engineer has been spent working under confidentiality agreements. I am a registered Professional Engineer (NC, FL, and LA) with demonstrated success utilizing a diverse set of software suites and technologies to design, implement, and analyze operational and engineering data in mining, civil, and environmental applications.</p>
+            <p><b>Want to Collab?</b> Great! I have a strong background of research, production, engineering, consulting, and customer service which enables me to analyze complex problems, develop and implement solutions, evaluate the process with measurable parameters, develop content, and present findings to all technical levels. Let's get the job done.</p>
+          </div>
+        </div>
+      </div>
     </div>
-		<p> &nbsp; </p>
-<!-- First blog post row start-->
-<table>
-	<tr>
-	<td colspan="3"><img src="images/projects/1.jpeg" class="img-thumbnail row-img2" alt="Row Image 1">
-        <div class="text-small">
-		</td>
-		<td>
-<p> &nbsp; </p>
-		</td>
-            <td>
-        <div class="text-small">
-			<p>
-			<a href="#" class="row-text"><b>Claire's Paw Tracker</b></a>  
-			</p>
-			<p><b>Claire is a toy maltese and poodle mix that has been one of my best friends for 12 years.</b> Claire was born with a heart condition (leaky valve) that developed into heart disease and turned into heart failure in January 2024. This project is about providing with the best care, collecting, visualizing, and analyzing her biometrics to allow us and vetenerians to respond accordingly.
-			</p>
-			</td>
-        </tr>
-        </div>
-<!-- First blog post row end-->
+  </section>
 
-<!-- Second blog post row start-->
-	<tr>
-	<td colspan="3"><img src="images/projects/2.jpg" class="img-thumbnail row-img2" alt="Row Image 2">
-        <div class="text-small">
-		</td>
-		<td>
-		<p> &nbsp; </p>
-		</td>
-            <td>
-        <div class="text-small">
-			<p>
-			<a href="#" class="row-text"><b>Upcoming Second Post...</b></a> 
-			</p>
-			<p>I am working <b>diligently</b> to create the second post.
-			</p>
-			</td>
-        </tr>
-        </div>
-<!-- Second blog post row end -->
-
-<!-- Third blog post row start-->
-	<tr>
-	<td colspan="3"><img src="images/projects/3.jpg" class="img-thumbnail row-img2" alt="Row Image 2">
-        <div class="text-small">
-		</td>
-		<td>
-		<p> &nbsp; </p>
-		</td>
-            <td>
-        <div class="text-small">
-			<p>
-			<a href="#" class="row-text"><b>Upcoming Third Post...</b></a> 
-			</p>
-			<p>I am working <b>diligently</b> to create the third post.
-			</p>
-			</td>
-        </tr>
-        </div>
-<!-- Third blog post row end -->
-</table>
-
-
-    </section>
-
-    <!-- Skills Section -->
-	<section id="skills">
+  <!-- Projects Section -->
+  <section id="projects" class="project-section py-3">
     <div class="container">
-    <section class="skills-section py-5">
-        <div class="container">
-            <h2 class="text-left mb-5">&nbsp; Skills</h2>
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="images/skills/1.png" class="card-img-top" alt="Skill 1">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">MIT xPRO Data Science and Analytics</h5>
-                            <p class="card-text">Professional certificate in data science and analytics. Course work included python, excel, pandas, numpy, seaborn, matplotlib, xgboost, random forest, and other data manipulation, analysis, and visualization tools.</p>
-                            <a href="#" class="btn btn-primary mt-auto">Link to course or bootcamp</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="images/skills/2.jpg" class="card-img-top" alt="Skill 2">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">PhD and MS in Engineering. Registered Professional Engineer</h5>
-                            <p class="card-text">PhD, MS, and BS in Mining Engineering from Virginia Tech. Registered Professional Engineer in North Carolina, Florida, and Louisiana.</p>
-                            <a href="#" class="btn btn-primary mt-auto">Link to course or bootcamp</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="images/skills/3.png" class="card-img-top" alt="Skill 3">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Python, PowerQuery, Excel, and SQL</h5>
-                            <p class="card-text">Skillsets with various python libaries (pandas, numpy, sklearn, matlibplot, seaborn, etc.).</p>
-                            <a href="#" class="btn btn-primary mt-auto">Link to course or bootcamp</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        <img src="images/skills/4.png" class="card-img-top" alt="Skill 4">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Data Storytelling</h5>
-                            <p class="card-text">Proven skillset to provide data summaries and recommendations to all levels of management and workforce.</p>
-                            <a href="#" class="btn btn-primary mt-auto">Link to course or bootcamp</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <h2 class="text-left mb-3">Projects</h2>
+      <div class="row">
+        <div class="col-md-3 col-sm-6 mb-3">
+          <a href="#" class="thumbnail-link thumbnail-wrapper">
+            <img src="images/projects/1.jpeg" class="img-thumbnail thumbnail-img" alt="Thumbnail 1">
+            <div class="thumbnail-text">Claire's Paw Tracker<br><br></div>
+          </a>
         </div>
-    </section>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <a href="#" class="thumbnail-link thumbnail-wrapper">
+            <img src="images/projects/2.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 2">
+            <div class="thumbnail-text">Upcoming...<br><br></div>
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <a href="#" class="thumbnail-link thumbnail-wrapper">
+            <img src="images/projects/3.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 3">
+            <div class="thumbnail-text">Upcoming...<br><br></div>
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <a href="#" class="thumbnail-link thumbnail-wrapper">
+            <img src="images/projects/4.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 4">
+            <div class="thumbnail-text">Upcoming...<br><br></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Me Section -->
-	<section id="contact">
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
     <div class="container">
-    <section class="contact-section py-5 text-white">
-        <div class="container">
-            <h2 class="text-left mb-5">&nbsp; Contact Me</h2>
-		
-            <div class="row justify-content-center mb-4">
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-envelope fa-2x mb-2"></i>
-                    <p>Testing123@gmail.com</p>
-                </div>
-  <!--          <div class="row justify-content-center">
-                <div class="col-auto">
-                    <a href="https://linkedin.com/in/kenneth-griffin-phd-pe" class="btn btn-circle btn-silver" data-toggle="tooltip" data-placement="top" title="LinkedIn">
-                        <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
-                    </a>
-                </div>
-            </div>
-			-->
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <a href="https://linkedin.com/in/kenneth-griffin-phd-pe" class="btn btn-circle btn-silver" data-toggle="tooltip" data-placement="top" title="LinkedIn">
-                        <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
-                    </a>
-                </div>
-                <div class="col-auto">
-                    <a href="https://github.com/GriffsKode" class="btn btn-circle btn-silver" data-toggle="tooltip" data-placement="top" title="GitHub">
-                        <img src="icons/github.png" alt="GitHub" class="social-icon">
-                    </a>
-                </div>
-            </div>
+      <h2 class="text-left mb-3">Skills</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <p>My skill set spans a range of technical proficiencies and soft skills, including:</p>
+          <ul>
+            <li>Programming Languages: Python, R, SQL</li>
+            <li>Data Analysis: Pandas, NumPy, SciPy, scikit-learn, PowerBI</li>
+            <li>Data Visualization: Matplotlib, Seaborn, Plotly, Excel</li>
+            <li>Web Development: HTML, CSS, JavaScript</li>
+            <li>Version Control: Git, GitHub</li>
+            <li>Project Management: Agile, Scrum</li>
+          </ul>
         </div>
-    </section>
-  <!-- Smooth scrolling script -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      // Add smooth scrolling to all links
-      $("a.nav-link").on('click', function(event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
+      </div>
+    </div>
+  </section>
 
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-    });
-  </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="text-center">Contact Me</h2>
+      <div class="text-center">
+        <p>If you would like to get in touch, please feel free to reach out through the following platforms:</p>
+        <a href="https://www.linkedin.com/in/kenneth-griffin-phd-pe" target="_blank" class="btn btn-circle btn-silver">
+          <i class="fab fa-linkedin-in social-icon"></i>
+        </a>
+        <a href="mailto:kenneth.griffin@example.com" class="btn btn-circle btn-silver">
+          <i class="fas fa-envelope social-icon"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
