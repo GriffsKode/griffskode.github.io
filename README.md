@@ -8,6 +8,7 @@ Virginia Tech, Mining Engineering, PhD, MS, and BS
 Lead Consultant and Project Manager @ WSP USA Environment and Infrastructure, formerly Wood PLC (2020 - Current)
 - Project Manager (annual up to $800,000) to complete environmental compliance monitoring, sampling, reporting, engineering, permitting, and operations for state and federal agencies. Oversee a PLC and several datalogger systems, maintain data pipelines, data collection, data manipulation, analysis, and visualization.
 - Led the development and certified financial assurance (ARO and terminal closure) closure analyses and cost estimates for four industrial facilities for government agencies compliance CY2021-CY2023.
+
 Technical Account Manager @ MineWare, Inc. (Komatsu Limited)
 - Conducted software training, field studies for system payload calibration, downtime optimization, data analysis, and made recommendations to clients. Payload calibration utilized linear regression modeling. Established and implemented Key Performance Indicators and optimizing operating strategies that resulted it up to a 10% increase in payload compliance. Implemented SQL queries to assist client with product material identification. 
 - Oversaw the deployment, integration, and operations of six MineWare monitoring systems on large mining shovels. Responsible for data oversight, technical account management, and onsite support for 31 monitoring systems. 
