@@ -6,8 +6,9 @@ Virginia Tech, Mining Engineering, PhD, MS, and BS
 
 ### Work Experience
 Lead Consultant and Project Manager @ WSP USA Environment and Infrastructure
-- big impact project 1
-- big impact project 2
+- Project Manager (annual up to $800,000) to complete environmental compliance monitoring, sampling, reporting, engineering, permitting, and operations for state and federal agencies. Oversee a PLC and several datalogger systems, maintain data pipelines, data collection, data manipulation, analysis, and visualization.
+- Led the development and certified financial assurance (ARO and terminal closure) closure analyses and cost estimates for four industrial facilities for government agencies compliance CY2021-CY2023.
+- 
 Senior Engineer and Project Manager @ Wood PLC
 - big impact project 1
 - big impact project 2
