@@ -12,6 +12,7 @@ Lead Consultant and Project Manager @ WSP USA Environment and Infrastructure, fo
 Technical Account Manager @ MineWare, Inc. (Komatsu Limited)
 - Conducted software training, field studies for system payload calibration, downtime optimization, data analysis, and made recommendations to clients. Payload calibration utilized linear regression modeling. Established and implemented Key Performance Indicators and optimizing operating strategies that resulted it up to a 10% increase in payload compliance. Implemented SQL queries to assist client with product material identification. 
 - Oversaw the deployment, integration, and operations of six MineWare monitoring systems on large mining shovels. Responsible for data oversight, technical account management, and onsite support for 31 monitoring systems. 
+
 Process Engineer, Production Engineer, and Supervisor @ The Mosaic Company
 - Data collection and analysis for continuous reporting of key performance indicators to mine management. 
 - Designed, maintained, evaluated, and troubleshot slurry production pumping systems for three mining facilities. Completed ongoing design changes based on operating data, which increased several systems by +100 tons per hour. Improvements resulted in significant increased revenue.  
