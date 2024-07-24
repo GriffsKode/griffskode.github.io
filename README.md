@@ -23,6 +23,7 @@ rougher concentrate upgrade project
 
 ### Projects
 The Claire Project
+
 Optimizer 
 Solver
 
