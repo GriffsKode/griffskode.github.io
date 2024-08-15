@@ -154,6 +154,137 @@
             margin-top: 5px;
             text-align: center;
         }
+.row2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+} 
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 0px; /* Add some padding to space out the images */
+  margin-left: 2%; /* Adds a 0% left margin to each column */
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: relative;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
     </style>
 </head>
 <body>
@@ -210,26 +341,115 @@
           <div class="text-content">
             <p><b> Welcome to Claire's PAW Tracker project! </b>
           <ul>
-            <li><b>Provides tools to track, visualize, and analyze your pet's breathing rate trends over time.</b></li>
-            <li>Breathing rate tracking is critical for pets with cardiac issues. Breathing rate should be measured when your pet is asleep. One in ten dogs are estimated to suffer from cardiac related issues. </li>
-            <li>Ordinary Least Squares regression (OLS) is used to determine if there is a correlation between furosemide (diuretic) and breathing rate. This can indicate fluid in their lungs.</li>
+            <li><b>Provides tools to track, visualize, and analyze your pet's breathing rate trends over time. The tables and graphs can be printed and provided to your vetenerian for aid with treatment.</b></li>
+            <li>Breathing rate tracking is critical for pets with cardiac issues. Breathing rate should be measured when your pet is asleep. Claire has degenerative mitral valve disease (MVD), which is the most common dog heart disease, impacting over one million dogs (<a href="https://smallanimal.vethospital.ufl.edu/clinical-services/cardiology/degenerative-mitral-valve-disease/">UF Small Animal Hospital</a>). MVD is a common heart condition that impacts small and medium sized dogs.</li>
+            <li>Ordinary Least Squares regression (OLS) is used to determine if there is a correlation between furosemide (diuretic) and breathing rate. Escalated breathing rates can indicate fluid in their lungs.</li>
 			<li>Breathing rates over 40 per minute can indicate <i>immediate</i> medical attention is required.</li>
 			<li>Input Parameters: Date, Time, Breathing Rate Per Minute, Furosemide Dose, Vetmedin Dose, and Enalapril Dose.</li>
-			<li>Tables and Graphs can be printed to provide to vetenerians to aid with treatment.
+			<li>Tables and Graphs can be found in the excel or python files. The CSV file contains the data that is loaded into python. If you are just using the excel file then do not worry about the CSV or python files.
           </ul>
 			<ul>
-			<li><a href="https://github.com/GriffsKode/griffskode.github.io/blob/main/files/breathingdata.csv">Breathing Data</a></li>
+			<li><a href="/files/ClairePAWtracker_20240806_R5.xlsx">Excel Visualization, Basic Stats, and Pivot Table (8/6/2024 Update) </a></li>
+			<li><a href="https://github.com/GriffsKode/griffskode.github.io/blob/main/files/breathingdata.csv">Breathing Data CSV file</a></li>
 			<li><a href="https://github.com/GriffsKode/griffskode.github.io/blob/main/files/clairepawtracker_20240806_R5.ipynb">Python Jupyter Notebook - OLS Regression Test and Plot (8/6/2024 Update)</a></li>
-			<li><a href="/files/ClairePAWtracker_20240806_R5.xlsx">Excel Visualization, Basic Stats, and Pivot Table (8/6/2024 Update) </a></li> 
     </div>
   </section>
+ <!-- Images used to open the lightbox -->
+&nbsp&nbsp<div class="row2">
+  <div class="column">
+    <img src="images/portfolio/clairePAW1.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/portfolio/clairePAW2.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/portfolio/clairePAW3.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/portfolio/clairePAW4.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/portfolio/clairePAW1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/portfolio/clairePAW2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/portfolio/clairePAW3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/portfolio/clairePAW4.jpg" style="width:100%">
+    </div>
+	
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+   </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<br>
   <!-- Skills Section -->
   <section id="skills" class="skills-section">
     <div class="container">
       <h2 class="text-left mb-1">Background</h2>
       <div class="row">
         <div class="col-md-12">
-          <p>Claire is a toy maltese and poodle mix that has been one of my best friends for over 12 years. Claire was born with a heart murmur (degenerative mitral valve disease) that developed into heart disease in July 2022, and turned into heart failure in January 2024. Claire was treated in the canine ICU overnight and released into our care the next morning. The treatment for Claire's condition consists of medicine to help her heart function better (vetmedin and enalapril), as well as keep the fluid out of her lungs (furosemide). This same condition is estimated to impact one in ten dogs (<a href="https://hospital.cvm.ncsu.edu/services/small-animals/cardiology/degenerative-mitral-valve-disease-in-dogs/">NC State Veterinary Hospital</a>).
+          <p>Claire is a toy maltese and poodle mix that has been one of my best friends for over 12 years. Claire was born with a heart murmur (degenerative mitral valve disease) that developed into heart disease in July 2022, and turned into heart failure in January 2024. Claire was treated in the canine ICU overnight and released into our care the next morning. The treatment for Claire's condition consists of medicine to help her heart function better (vetmedin and enalapril), as well as keep the fluid out of her lungs (furosemide). This same condition is estimated to impact over one million dogs. The <a href="https://hospital.cvm.ncsu.edu/services/small-animals/cardiology/degenerative-mitral-valve-disease-in-dogs/">NC State Veterinary Hospital</a> and the University of Florida Small Animal Hospital provide additional technical information.
 			One of the best basic methods for a pet owner to better understand their pet's stability is their resting breathing rate. A dog's resting breathing rate (breaths per minute) is counted when the dog is completely asleep. 
 			</p>
             <p><b>This project intends to provide a tool for pet owners to use while tracking their best friend's resting breathing rate.</b> Please consult with vetenerians and professionals to manage your pet's specific condition. Please let me know if you have ideas on how to make the tools more helpful. Thank you!
