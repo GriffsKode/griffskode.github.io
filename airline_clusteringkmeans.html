@@ -342,20 +342,20 @@ img.hover-shadow {
         </div>
         <div class="col-md-8">
           <div class="text-content">
-            <p><b> <h3> Airline Customer Data Utilized to Find Similar Customers Clusters with K-Means.</h3> </b>
+            <p><b> <h3> Identifying Similar Airline Customers with K-Means Clustering</h3> </b>
           <ul>
-            <li><b>The objective of this exercise is to analyze airline customer data using K-Means to determine similar customer groups and provide the scripts in a python jupyter notebook.</b></li>
+            <li><b>The objective of this exercise is to analyze airline customer data using K-Means to identify similar customer groups. The coding exercise is provided in the python jupyter notebook below.</b></li>
             <li>K-means is a popular unsupervised learning clustering algorithm that identifies similar data points into groups or clusters. K-means can be used for a wide variety data such as identifying similar customers, anomaly and fraud detection, image processing, text processing, and many other valuable applications.
 			</li>
 			The K-means algorithm identifies the centroid (arithmetic mean) of all points within the same cluster. The K-means algorithm will assign every point to its closest cluster center (centroid) each iteration. The algorithm will continue to repeat this process until there is a minimum change of the cluster centers. More information can be found <a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html" target="_blank">here for Scikit-Learn K-Means</a> and <a href="https://www.nvidia.com/en-us/glossary/k-means/" target="_blank"> here for a general overview of the K-Means algorithm</a>.
 			
 			</li>
 			
-			<li>The K-Means clustering elbow method graph (number of clusters versus WCSS) shows there is a noticable bend (elbow) at approximately 3 clusters. The within-cluster sum of squares (WCSS), also known as inertia and is calculated for the current k value and appended to the wcss list. WCSS measures how compact clusters are, while lower wcss values indicate tighter clusters. The final graph shows the three different clusters.  
+			<li>The K-Means clustering elbow method graph (number of clusters versus WCSS) shows there is a noticable bend (elbow) in the curve at approximately 3 clusters. The within-cluster sum of squares (WCSS), also known as inertia is calculated for each k value and appended to the wcss list. WCSS measures how compact clusters are, where lower wcss values indicate tighter clusters. The final graph shows the three clusters for Airline Customer AccountAge vs Mileage Balance.  
 			</li>
           </ul>
 			<ul>
-			<li>Tables and graphs can be found here: <a href="https://github.com/GriffsKode/griffskode.github.io/blob/main/portfolio/clustering/AirlineCustomersClusteringKmeans.ipynb" target="_blank">Airline Customer Data Utilized to Find Similar Customers Clusters with K-Means Python Jupyter Notebook</a></li>
+			<li>Tables and graphs can be found here: <a href="https://github.com/GriffsKode/griffskode.github.io/blob/main/portfolio/clustering/AirlineCustomersClusteringKmeans.ipynb" target="_blank">Identifying Similar Airline Customers with K-Means Clustering Python Jupyter Notebook</a></li>
 
 
  
@@ -459,13 +459,13 @@ function showSlides(n) {
       <h2 class="text-left mb-1">Results</h2>
       <div class="row">
         <div class="col-md-12">
-          <p>-The generated data consists of 20 points with the first column containing how many months the customer account has been active and the second column contains the Current Mileage Balance reward points.
+          <p>-The generated data consists of 20 points that each include how many months the customer account has been active (AccountAge) and the Current Mileage Balance (CurrentMileageBalance) reward points.
 
 		  <br><br>
-		  -Histograms are created using seaborn histplot to gain a better understanding of the account age and current mileage balance distributions. The histogram plots show the distribution of the two variables is different, so the AccountAge variable is broken down into ranges and displayed on a bar plot. 
+		  -Histograms are created with seaborn histplot to provide insight into the account age and current mileage balance distributions. The histogram plots show the distribution of the two variables are different, so the AccountAge variable is broken down into specific age ranges and displayed on a bar plot. 
 		  <br><br>
 		  
-		  -The K value is the number of clusters for the k-means method. The visual elbow method consists of plotting the K-values and corresponding WCSS values over a given range. This exercise plotted the range of 1 to 12 k values. 
+		  -The k value is the number of clusters for the k-means algorithm. The visual elbow method consists of plotting the k values and corresponding WCSS values over a given range. This exercise plotted the k values range of 1 to 12. 
 		  <br><br>
 		  
 		  -There is a noticable elbow in the WCSS curve, which shows k = 3 is likely the best number of clusters for this exercise. The centroid coordinates were identified and plotted with the three data clusters on the Airline Customer AccountAge vs Mileage Balance Clusters graph. 
