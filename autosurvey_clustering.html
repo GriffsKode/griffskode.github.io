@@ -459,16 +459,16 @@ function showSlides(n) {
       <h2 class="text-left mb-1">Results</h2>
       <div class="row">
         <div class="col-md-12">
-          <p>-The generated data consists of 20 points that each include how many months the customer account has been active (AccountAge) and the Current Mileage Balance (CurrentMileageBalance) reward points.
+          <p>-The automoble survey data consists of 792 points containing yes or no answers (1 or 0) for whether the automobile satisfies that category (variable). The variables in this dataset are driving_properties, interior, technology, comfort, reliability, handling, power, consumption, sporty, safety, gender, and household.
 
 		  <br><br>
-		  -Histograms are created with seaborn histplot to provide insight into the account age and current mileage balance distributions. The histogram plots show the distribution of the two variables are different, so the AccountAge variable is broken down into specific age ranges and displayed on a bar plot. 
+		  -Dendrograms and heat maps were created created to provide insight into each parameter. 	  
 		  <br><br>
 		  
-		  -The k value is the number of clusters for the k-means algorithm. The visual elbow method consists of plotting the k values and corresponding WCSS values over a given range. This exercise plotted the k values range of 1 to 12. 
+		  -The k value is the number of clusters for the k-means algorithm. The visual elbow method consists of plotting the k values and corresponding WCSS values over a given range. This exercise used k=2 as the value for the K-means clustering portion.  
 		  <br><br>
 		  
-		  -There is a noticable elbow in the WCSS curve, which shows k = 3 is likely the best number of clusters for this exercise. The centroid coordinates were identified and plotted with the three data clusters on the Airline Customer AccountAge vs Mileage Balance Clusters graph. 
+		  -The most important components of the automobile based on the survey were identified through Principal Component Analysis (PCA).  
 		  <br><br>
 		  
 		  -Similar data could be processed through this methodology in order to identify similar data points as well as anomalies. 
