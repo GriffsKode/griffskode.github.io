@@ -332,9 +332,9 @@ img.hover-shadow {
           <div class="text-small">
 			<ul class="list-group text-center list-unstyled">
               <li><b>Methods: Python</li> 
-              <li>Data Analysis: Pandas </li>
-			  <li>Data Visualization: Matplotlib, Seaborn</li>
-			  <li>Data Modeling: Scikit-Learn, K-Means </li>
+              <li>Data Analysis: Pandas, Numpy, PCA </li>
+			  <li>Data Visualization: Matplotlib, Plotly, Seaborn, bioinfokit.visuz</li>
+			  <li>Data Modeling: Scikit-Learn, K-Means</li>
 			  <li>Web Development: HTML, CSS</li></b>
 			  
             </ul>
@@ -347,11 +347,11 @@ img.hover-shadow {
             <li><b>The objective of this exercise examines Auto Survey data that contains reviews of different parameters of an automobile. The coding exercise is provided in the python jupyter notebook below.</b></li>
             <li>The data consists of yes or no questions (1 or 0) for whether the automobile satisfies that category (variable). The variables in this dataset are driving_properties, interior, technology, comfort, reliability, handling, power, consumption, sporty, safety, gender, and household.
 			</li>
-			Dendrograms is a method of hierarchical clustering. More information can be found <a href="https://www.mathworks.com/help/stats/hierarchical-clustering.html" target="_blank">here for a general overview of the hierarchical-clustering</a> and <a href="https://scikit-learn.org/stable/auto_examples/cluster/plot_agglomerative_dendrogram.html" target="_blank"> here for Scikit-Learn Dendrograms overview</a>.
-			
+			<li>Dendrograms is a method of hierarchical clustering. More information can be found <a href="https://www.mathworks.com/help/stats/hierarchical-clustering.html" target="_blank">here for a general overview of the hierarchical-clustering</a> and <a href="https://scikit-learn.org/stable/auto_examples/cluster/plot_agglomerative_dendrogram.html" target="_blank"> here for Scikit-Learn Dendrograms overview</a>.
 			</li>
 			
-			<li>The K-Means clustering elbow method graph (number of clusters versus WCSS) shows there is a noticable bend (elbow) in the curve at approximately 2 clusters.
+			<li>Principal Component Analysis (PCA) is a data preprocessing technique used to extract the most informative features, while preserving the most relevant information from the dataset. PCA reduces the model's complexity/dimensionality. More information on PCA can be found here:
+				<a href="https://www.ibm.com/topics/principal-component-analysis" target="_blank"> IBM What is Principal Component Analysis.</a>
 			</li>
           </ul>
 			<ul>
@@ -462,14 +462,16 @@ function showSlides(n) {
           <p>-The automoble survey data consists of 792 points containing yes or no answers (1 or 0) for whether the automobile satisfies that category (variable). The variables in this dataset are driving_properties, interior, technology, comfort, reliability, handling, power, consumption, sporty, safety, gender, and household.
 
 		  <br><br>
-		  -Dendrograms and heat maps were created created to provide insight into each parameter. 	  
+		  -Dendrograms and heat maps were created created to provide insight into each parameter. The heat map showed Power is the most correlated feature to "Sporty."  
 		  <br><br>
 		  
-		  -The k value is the number of clusters for the k-means algorithm. The visual elbow method consists of plotting the k values and corresponding WCSS values over a given range. This exercise used k=2 as the value for the K-means clustering portion.  
+		  -The k value is the number of clusters for the k-means algorithm. The visual elbow method consists of plotting the k values and corresponding WCSS values over a given range. This exercise used k=2 as the value for the K-means clustering portion. The K-Means clustering showed the Driving Priorities, Technology, and Power features contribute to a customer falling into the same cluster.  
 		  <br><br>
 		  
-		  -The most important components of the automobile based on the survey were identified through Principal Component Analysis (PCA).  
-		  <br><br>
+		  -The most important components of the automobile based on the survey were identified through Principal Component Analysis (PCA). PCA is necessary before intrepreting K-means to flatten the three-dimensional data frame to two dimensions to be plotted. Additional information on PCA may be found here:
+		  <a href="https://bioturing.medium.com/how-to-read-pca-biplots-and-scree-plots-186246aae063" target="_blank"> How to read PCA biplots and scree plots by BioTuring Team.</a>
+		  The analysis found reliability is more important than comfort. Technology is more important than interior. Most people who took the survey were male. 
+		  <br> <br>
 		  
 		  -Similar data could be processed through this methodology in order to identify similar data points as well as anomalies. 
 
