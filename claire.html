@@ -333,7 +333,7 @@ img.hover-shadow {
           <div class="text-small">
 			<ul class="list-group text-center list-unstyled">
               <li><b>Methods: Python and Excel</li> 
-              <li>Data Analysis: Pandas </li>
+              <li>Data Analysis: Pandas, pyOD, KNN, LinearRegression </li>
 			  <li>Data Visualization: Matplotlib, Seaborn, Plotly</li>
 			  <li>Web Development: HTML, CSS</li></b>
 			  
@@ -344,17 +344,23 @@ img.hover-shadow {
           <div class="text-content">
             <p><b> Welcome to Claire's PAW Tracker project! </b>
           <ul>
-            <li><b>Provides tools to track, visualize, and analyze your pet's breathing rate trends over time. The tables and graphs can be printed and provided to your veterinarian to aid with treatment.</b></li>
-            <li>Breathing rate tracking is critical for pets with cardiac issues. Breathing rate should be measured when your pet is asleep. Claire has degenerative mitral valve disease (MVD), which is the most common dog heart disease, impacting over one million dogs (<a href="https://smallanimal.vethospital.ufl.edu/clinical-services/cardiology/degenerative-mitral-valve-disease/" target="_blank">UF Small Animal Hospital</a>). MVD is a common heart condition that impacts small and medium sized dogs.</li>
-            <li>Ordinary Least Squares regression (OLS) is used to determine if there is a correlation between furosemide (diuretic) and breathing rate. Escalated breathing rates can indicate fluid in their lungs.</li>
-			<li>Breathing rates over 40 per minute can indicate <i>immediate</i> medical attention is required.</li>
-			<li>Input Parameters: Date, Time, Breathing Rate Per Minute, Furosemide Dose, Vetmedin Dose, and Enalapril Dose.</li>
-			<li>Tables and Graphs can be found in the excel or python files. The CSV file contains the data that is loaded into python. If you are just using the excel file then do not worry about the CSV or python files.
+            <li><b>Breathing rate tracking is critical for pets with cardiac issues. Claire's PAW tracker  provides tools to track, visualize, and analyze your pet's breathing rate trends over time. The FREE file download links are located below. The tables and graphs can be printed and provided to your veterinarian to aid with treatment.</b></li>
+            <li>Anyone can use these free tools to monitor your pet as well! All you have to do is record date, time, breaths per minute. Collect the numbers and store them in your phone. Transfer the numbers to your computer and input to the Excel File or breathingdata.csv for Python.</li>
+            <li>Breathing rate should be measured when your pet is asleep. Breathing rates over 40 per minute can indicate <i><u>immediate</u></i> medical attention is required.
+			<li>Input Parameters: Date, Time, Breathing Rate Per Minute, Furosemide Dose, Vetmedin Dose, Enalapril Dose, and Sildenafil Dose.</li>
+			
+			<li>Claire has degenerative mitral valve disease (MVD), which is the most common dog heart disease, impacting over one million dogs (<a href="https://smallanimal.vethospital.ufl.edu/clinical-services/cardiology/degenerative-mitral-valve-disease/" target="_blank">UF Small Animal Hospital</a>). MVD is a common heart condition that impacts small and medium sized dogs.</li>
+	
+
+			<li>The python jupyter notebook includes outlier detection to flag breathing rates that are not statistically similar. This does not mean anything is wrong with your pet, however extra monitoring should be conducted. Also Oridinary Least Squares regression (OLS) is used to determine if there is a correlation between furosemide (diuretic) and breathing rate. Escalated breathing rates can indicate fluid in their lungs.</li>
+			
+			<li>Tables and Graphs can be found in the excel or python files. The CSV file contains the data that is loaded into python. If you are just using the excel file then the CSV or python files are not required.
           </ul>
 			<ul>
-			<li><a href="/files/ClairePAWtracker_20240904.xlsx">Excel Visualization, Basic Stats, and Pivot Table (9/4/2024 Update) </a></li>
-			<li><a href="https://github.com/GriffsKode/griffskode.github.io/blob/main/files/breathingdata.csv" target="_blank">Breathing Data CSV file</a></li>
-			<li><a href="https://github.com/GriffsKode/griffskode.github.io/blob/main/files/clairepawtracker_20240904.ipynb" target="_blank">Python Jupyter Notebook - OLS Regression Test and Plot (9/4/2024 Update)</a></li>
+			<li><a href="/files/ClairePAWtracker_20240921.xlsx">Excel Visualization, Basic Stats, and Pivot Table (9/21/2024 Update) </a></li>
+			<li><a href="https://github.com/GriffsKode/griffskode.github.io/blob/main/files/clairepawtracker_20240921.ipynb" target="_blank">Python Jupyter Notebook - OLS Regression Test and Plot (9/21/2024 Update)</a></li>
+			<li><a href="https://github.com/GriffsKode/griffskode.github.io/blob/main/files/breathingdata.csv" target="_blank">Claire's Breathing Data CSV file</a></li>
+
     </div>
   </section>
  <!-- Images used to open the lightbox -->
@@ -469,10 +475,18 @@ function showSlides(n) {
       <div class="row">
         <div class="col-md-3 col-sm-6 mb-3">
  <!--         <a href="#" class="thumbnail-link thumbnail-wrapper">  -->
+            <img src="images/projects/6.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 1">
+            <div class="thumbnail-text"><b>August 21, 2024</b></a><br>Claire's breathing rate was significantly greater than normal, so we took her to the emergency vet. The first vet evaluated her as normal and released her. We felt it was necessary to seek advice from her cardiology team, which advised her to stay overnight in the ICU. Claire's chest x-rays showed minor fluid in her lungs. Additional testing identified she developed pulmonary hypertension and now takes sildenafil. Pulmonary hypertension can mimic heart failure with increased breathing rate. Claire was released on 9/17 and doing well since. Python coding outlier detection added.
+			<br><br></div>
+          </a>
+        </div>
+		        <div class="col-md-3 col-sm-6 mb-3">
+ <!--         <a href="#" class="thumbnail-link thumbnail-wrapper">  -->
             <img src="images/projects/5.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 1">
             <div class="thumbnail-text"><b>August 7, 2024</b></a><br>Claire visited her cardiologist for a scheduled echocardiogram and bloodwork check up. Claire received positive news that while her heart is significantly enlarged, it is no bigger than it was, her function is no further reduced, and she has not developed pulmonary hypertension. Her breathing rate continues to be stable. Python and Excel have been updated.<br><br></div>
           </a>
-        </div>        <div class="col-md-3 col-sm-6 mb-3">
+        </div>       
+		<div class="col-md-3 col-sm-6 mb-3">
  <!--         <a href="#" class="thumbnail-link thumbnail-wrapper">  -->
             <img src="images/projects/0.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 1">
             <div class="thumbnail-text"><b>July 8, 2024</b></a><br>Claire has been doing well overall and happy. She enjoys going outside and for short walks (two blocks). Her breathing rate continues to be stable. Python and Excel have been updated.<br><br></div>
