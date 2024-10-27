@@ -30,7 +30,7 @@
             position: relative;
         }
         section {
-            padding: 20px 0;
+            padding: 15px 0;
         }
         .about-section {
             padding: 10px 0;
@@ -332,9 +332,9 @@ img.hover-shadow {
           <img src="images/projects/150.jpg" alt="Profile Image" class="profile-img mb-3">
           <div class="text-small">
 			<ul class="list-group text-center list-unstyled">
-              <li><b>Methods: Python and Excel</li> 
-              <li>Data Analysis: Pandas, math </li>
-			  <li>Data Visualization: Matplotlib, Seaborn</li>
+              <li><b>Methods: Python</li> 
+              <li>Data Analysis: Pandas, Numpy, BeautifulSoup</li>
+			  <li>Data Visualization: Matplotlib</li>
 			  <li>Web Development: HTML, CSS</li></b>
 			  
             </ul>
@@ -342,13 +342,14 @@ img.hover-shadow {
         </div>
         <div class="col-md-8">
           <div class="text-content">
-            <p><b> <h5>Defend Your Home Against Hurricanes Using Data Science</h5></b>
+            <p><b> <h3>Defend Your Home Against Hurricanes Using Data Science</h3></b>
           <ul>
-            <li>We were displaced from our Saint Petersburg Florida home after Hurricane Helene produced historic flooding not experienced in the Tampa Bay region for nearly 100 years. We were subsequently hit by a second major hurricane (Milton) within two weeks. <b>My home experienced 16-19” of surge surrounding the entire exterior perimeter during Hurricane Helene. However, my home experienced 1-2" of total interior water height while my immediate neighbors experienced up to 18" total interior water height at the same approximate elevation. My home experienced 500-900% less total interior water height by utilizing readily available materials. </b>
+            <li>We were displaced from our Saint Petersburg Florida home after Hurricane Helene produced historic surge flooding not experienced in the Tampa Bay region for nearly 100 years. We were subsequently hit by a second major hurricane (Milton) within two weeks. </li>
+			<li><b>My home experienced 16-19” of surge surrounding the entire exterior perimeter during Hurricane Helene. However, my home only experienced 1-2" of total interior water height while my immediate neighbors experienced up to 18" total interior water height at the same approximate elevation. My home experienced 500-900% less total interior water height by utilizing readily available materials. </b>
 </li>
 
 			<li>
-			Officials often say, “hide from the wind and run from the water.” However, they left out that you should invoke your inner Home Alone with, “this is my house, I have to defend it.” <b>Now I want to share how I used publicly available data so you can defend your home as well.</li></b></i>
+			Officials often say, “hide from the wind and run from the water.” However, they left out that you should invoke your inner Home Alone with, “this is my house, I have to defend it.” <b>Now I want to share and provide a python Barrier Height Tool that uses publicly available data so you can defend your home as well.</li></b></i>
 			<li><b>This page outlines:</b></li>
 			<ul>
 				<li>Identify potential water elevations your area may experience. </li>
@@ -454,81 +455,31 @@ function showSlides(n) {
   <!-- Skills Section -->
   <section id="skills" class="skills-section">
     <div class="container">
-      <h2 class="text-left mb-1">Preparation During Imminent Landfall</h2>
-      <div class="row">
+      <h2 class="text-left mb-1">Barrier Height Tool</h2>
+      <h4 class="text-left mb-1"><u>Compare Your Home to the Forecasted Total Water Elevation Level</u></h4>      <div class="row">
         <div class="col-md-12">
-			<p>Flooding and storm surge can be mitigated in a wide variety of ways, however the best solution is to seal your home’s openings using a variety of methods if there is only 24-48 hours to prepare for imminent landfall. Water can seep in from anywhere, so it is best to focus on what you can control. The level to which you seal your home will depend on the level of surge inundation expected.  
-			</p>
-			<p>Links:<br>
-			<a href="https://slosh.nws.noaa.gov/etsurge/">NOAA Extratropical Water Level Guidance </a><br>
-			<a href="https://www.nhc.noaa.gov/">National Hurricane Center</a><br>
-			<a href="https://www.nhc.noaa.gov/prepare/hazards.php">National Hurricane Center Hurricane Preparedness - Hazards</a><br>
-			<a href="https://www.weather.gov/safety/hurricane-plan">National Hurricane Center - What to Do Before the Tropical Storm or Hurricane</a><br>
-			<a href="https://www.fema.gov/about/glossary/elevation-certificate">FEMA Elevation Certificate - Requirement to Obtain Lowest Floor Elevation in Zone A </a><br>			
+			<p>Flooding and storm surge can be mitigated in a wide variety of ways, however the best solution is to seal your home’s openings if there is only 24-48 hours to prepare for imminent landfall. Water can seep in from anywhere, so it is best to focus on what you can control. The level to which you seal your home will depend on the level of surge inundation expected. Please reference the disclaimer and terms use of this information.  
+			</p>	
 			
-            <p><b>The level to which you should seal your home can be roughly determined by using several sources of publicly available data. </b> There is an overwhelming number of data sources that provide estimates for wind, rainfall, time, etc. but we will focus on storm surge. The height of storm surge will dictate the level of barrier that you should construct. The National Weather Service (2024) defines storm surge as, “an abnormal rise of water generated by a storm, over and above the predicted astronomical tide.” Estimates often include ranges from 1-15 feet, however this estimate is not a true representation of how height the water will be at your home based on its elevation. 
+            <p><b>There is an overwhelming number of data sources that provide estimates for wind, rainfall, landfall timing, etc. but this focuses on storm surge and how it pertains to your home's base elevation. The level to which you should seal your home or the height of barrier required can be estimated using publicly available data.</b> The National Weather Service (2024) defines storm surge as, “an abnormal rise of water generated by a storm, over and above the predicted astronomical tide.” Generic storm surge estimates are constantly changing as the storm moves, which requires a dynamic tool to understand the level of flooding your home may experience. <b>This python educational tool retrieves the newest NOAA forecasted water level guidance and compares it to your home's base elevation to produce a graph which allows the user to determine the height of the barriers they should construct. The <a href=" ">python jupyter notebook can be downloaded here.</a></b>
 			</p>
-			<p><b>NHC issues worst case scenario estimates to save lives and ensure people can evacuate. It is critical that you follow state and local guidelines on when you evacuate and do not use this as a justification to shelter in place when flooding could occur. The reason why this is important to follow mandatory guidelines is because hurricanes are unpredictable and tend to “wobble,” or slightly alter their path that often goes against the initial computer models.</b> 
+			
+			<p>Please reference the <a href="https://slosh.nws.noaa.gov/etsurge/" target="_blank">NOAA Extratropical Water Level Guidance User Manual</a> for more information regarding how NOAA determines the "Total Water Guidance" variable. The "Total Water Guidance" takes into consideration tides, timing, storm surge, and recent water level observed. NOAA nor this educational tool can ultimately predict the exact water level observed during a hurricane. I did use the NOAA Extratropical Water Level to determine the height of the flood barriers to construct and will share my results. My results do not provide any guarantee, I am sharing for educational use, and I hope it can help someone. <b>The barrier height is determined by using the NOAA Extratropical Water Level Guidance Forecasted Water Level maximum for the event and subtracting your home's base elevation. A safety factor of an additional 1.25 feet is suggested and ultimately decided by the user. </b>
 			</p>
-			<p>
-			The NOAA tide prediction chart can be used to understand how the tides line up with the timing of storm surge as the storm moves in. The tide prediction collects data from multiple sources and combines them into a “predicted water elevation” variable. This predicted water elevation is how you will know the level you should seal your home, as well as the height of the barriers you should construct.
-			</p>
-			<p>
-			The best method to sealing your home is a combination of sand bags, tarps, foam spray, caulk, flex seal, and other similar products. First examine the outside of your house and locate all openings such as exterior doors, vents, ducting, crawl spaces, etc. Develop a plan to seal each opening for example a door’s seams can be taped, a tarp placed on the exterior, interlocking sand bags, and tape the tarp in place. Each opening will require you to use your MacGyver skills. 
-			</p>
-			<p>
-			The level at which you should seal your home will depend on the level of surge or the expected total water elevation in comparison to your home. 
-			</p>
-			<p>
-			I used NOAA’s ETSS stn predicted water levels data to help plan and size my flood barriers. Now I want to share what I have learned to help you protect homes. 
-
-
-			<p>
-			NOAA, NHC, and local weather services provide guidance on how to protect your home based on the maximum potential threats. You should always evacuate when mandatory orders are in place, however here is how you can gauge the severity of the event with data. 
-			</p>
-
-			<p>
-			Helene and Milton presented similar but different hazards. Flooding and wind for the Tampa Bay Area. 
-			</p>
-
-			<p>
-			NOAA total prediction allows you to understand the predicted water level MSL in comparison to your home. Houses are surveyed and must report a bottom elevation. 
-			</p>
-
-			<p>
-			The difference between the predicted water level MSL and the lowest elevation of your home is the calculated size of the barriers that need to be constructed. 
-			</p>
-
-			<p>
-			There are a wide variety of options depending on the level of barrier required:
-			</p>
-
-			<p>
-			No flooding projected, however may want to place sand bags in case track changes.
-			0-3 feet: Sand bags + tarp + taping seams
-			4+ feet: Caulking door shut or foam/peal spray. 
-			</p>
-
-			<p>
-			Low lying entries to your home: dryer vents, AC plumbing lines, cracks in exterior, new additions may experience seepage, 
-			</p>
-
-
-
-			<p>
-			Write Jupyter notebook to scrape ETSS stn location closest to your home. 
-			</p>
-
-			<p>
-			User enters the elevation of their home
-			</p>
-
-			<p>
-			Calculates the size of barrier required. Plots data. 
-			</p>
-
-
-
+      <h4 class="text-left mb-1"><u>How Does the Barrier Height Tool Work?</u> </h4>
+	  <div class="row">
+        <div class="col-md-12">
+			<p><b>The barrier height tool's python script automates</b> the following steps:
+    <ol>
+        <li><b>NOAA's Extratropical Water Level Guidance Data is obtained for the <a href="https://slosh.nws.noaa.gov/etsurge/index.php?page=stn&region=gm&datum=msl&list=&map=0-48&type=text&stn=flpete" target="_blank">Saint Petersburg, Florida station</b></a>. The 'URL' variable in the python script can be changed to any other NOAA Extratropical Water Level Guidance Text Data page across the United States.</li>
+        <li><b>Data is transformed </b>and formatted into a useable Pandas dataframe. </li>
+        <li>Values noted as 99.90 in NOAA's data are replaced with NaN because this indicates another data parameter is used at that specific time (observed or forecasted levels).</li>
+		<li><b>User can define their home base elevation.</b> A home's base elevation can be found on the FEMA flood certificate. This tool's home base elevation references the user's base elevation at which the items you care about are at (i.e. garage, lowest elevation of machinery or equipment servicing the building). 
+        <li><b>NOAA's Extratropical Observed Water Levels (red circles), Forecasted Water Levels (black X's), and Home Base Elevation (blue line) are plotted with Matplotlib.</b></li>
+		<li>The Barrier Height Observed (BarrierHeightObs = Observed Water Level - Home Base Elevation) and the Barrier Height Forecasted (BarrierHeightFcst = Forecasted Water Level - Home Base Elevation) are calculated in new columns.</li>
+		<li><b>The Barrier Height Required Graph is plotted with Matplotlib, where the Red Zone indicates when Barriers are required, the Orange Zone indicates where Barriers are Suggested, and the Green Zone indicates where barriers are not required. </b></li> 
+    </ol>
+		</p>
 
   </section>
 
@@ -537,51 +488,113 @@ function showSlides(n) {
   <!-- Projects Section -->
   <section id="projects" class="project-section py-4">
     <div class="container">
-      <h2 class="text-left mb-2">Updates</h2>
-      <div class="row">
-        <div class="col-md-3 col-sm-6 mb-3">
- <!--         <a href="#" class="thumbnail-link thumbnail-wrapper">  -->
-            <img src="images/projects/6.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 1">
-            <div class="thumbnail-text"><b>August 21, 2024</b></a><br><b>We identified Claire needed medical attention on 9/16 using her PAW Tracker.</b> Claire's breathing rate was significantly greater than normal, so we took her to the emergency vet. The first vet evaluated her as normal and released her. We felt it was necessary to seek advice from her cardiology team, which advised her to stay overnight in the ICU. Claire's chest x-rays showed minor fluid in her lungs. Additional testing identified she developed pulmonary hypertension and now takes sildenafil. Claire was released on 9/17 and doing well since. Pulmonary hypertension can mimic heart failure with increased breathing rate. Python coding outlier detection added.
-			<br><br></div>
-          </a>
-        </div>
-		        <div class="col-md-3 col-sm-6 mb-3">
- <!--         <a href="#" class="thumbnail-link thumbnail-wrapper">  -->
-            <img src="images/projects/5.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 1">
-            <div class="thumbnail-text"><b>August 7, 2024</b></a><br>Claire visited her cardiologist for a scheduled echocardiogram and bloodwork check up. Claire received positive news that while her heart is significantly enlarged, it is no bigger than it was, her function is no further reduced, and she has not developed pulmonary hypertension. Her breathing rate continues to be stable. Python and Excel have been updated.<br><br></div>
-          </a>
-        </div>       
-		<div class="col-md-3 col-sm-6 mb-3">
- <!--         <a href="#" class="thumbnail-link thumbnail-wrapper">  -->
-            <img src="images/projects/0.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 1">
-            <div class="thumbnail-text"><b>July 8, 2024</b></a><br>Claire has been doing well overall and happy. She enjoys going outside and for short walks (two blocks). Her breathing rate continues to be stable. Python and Excel have been updated.<br><br></div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
- <!--         <a href="#" class="thumbnail-link thumbnail-wrapper">  -->
-            <img src="images/projects/1.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 1">
-            <div class="thumbnail-text"><b>June 18, 2024</b></a><br>Claire visited the veterinarian for a check up last week. Claire needed to have new chest x-rays and blood to analyze her kidney and electrolyte levels. The veterinarian noted Claire's chart showed stable resting breathing rates.<br><br></div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
- <!--       <a href="#" class="thumbnail-link thumbnail-wrapper"> -->
-            <img src="images/projects/2.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 2">
-            <div class="thumbnail-text"><b>May 14, 2024</b></a><br>Claire visited the veterinarian for a check because she has experienced a recent increase in coughing. Claire's chest x-rays showed slight fluid accumulation in her lungs, so the furosemide dose was increased to a 0.8 mL twice daily. An increase in her resting breathing rate was not observed. This is why it is important to look for other signs as well.<br><br></div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-<!--          <a href="#" class="thumbnail-link thumbnail-wrapper"> -->
-            <img src="images/projects/3.jpg" class="img-thumbnail thumbnail-img" alt="Thumbnail 3">
-            <div class="thumbnail-text"><b>February 24, 2024</b></a><br>Frequency data tabulation began in order to better understand Claire's heart average resting breathing rate.<br><br></div>
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-<!--          <a href="#" class="thumbnail-link thumbnail-wrapper"> -->
-            <img src="images/projects/4.jpeg" class="img-thumbnail thumbnail-img" alt="Thumbnail 4">
-            <div class="thumbnail-text"><b>January 12, 2024</b></a><br>Claire went into congestive heart failure. Claire showed signs of rapid breathing (>40 breaths per minute) and coughing frequently. Claire was taken to the emergency veterinarian and recovered overnight in the ICU. Claire started on the medicine furosemide in order to draw the fluid out of her lungs caused by her heart not functioning properly. PAW Tracker was started, however data was not tabulated.</div>
-          </a>
-        </div>
+      <h2 class="text-left mb-1">Case Study Results</h2><br>
+      <h4 class="text-left mb-1"><u>Hurricane Helene (9/27/2024)</u></h4>      <div class="row">
+        <div class="col-md-12">
+			<p>Hurricane Helene produced historic surge flooding not experienced in the Tampa Bay region for nearly 100 years. My neighborhood had never flooded prior, according to FEMA records and may not again for another 100 years. Hurricane Helene was a strong Category 2, strengthing into a strong Category 4 while it side swiped the Tampa Bay Area (Tampa & Saint Petersburg). 
+			</p>
+			<p><b>The NOAA Extratropical Total Water Guidance issued on 9/25/2024 at 11:20 AM, which was ~32 hours prior to the storm noted a maximum water elevation of approximately ~8.5 feet Mean Sea Level (MSL). This would indicate my home at a base elevation of 6.2 feet MSL would experience ~2.3 feet of surge flooding.</b>
+			</p>
+			<p>I learned as I constructed each barrier, making improvements to the next. Each barrier ranged from 2-4 feet in height depending on the limited materials I had available. The barrier construction section will note on some of the things I learned. I also had to take into consideration that I needed to evacuate from the flood zone for my own safety. </p>
+			<p><b>The NOAA Extratropical Total Water Guidance issued on 9/28/2024 at 2:20 AM, noted the the Total Water Guidance Observed was approximately ~7.3 MSL.</b>
+			</p>
+			<p>
+			<b>-I measured a ~17 inch water line from my home's base elevation. This would mean that the Observed Water Level experienced at my home was approximately ~7.6 feet (= 6.2 feet + 17 inches). The NOAA Extratropical Total Water Guidance issued on 9/25/2024 at 11:20 AM (32 hours prior) was ~8.5 feet and the result was ~7.3 feet.
+			</p>
+			<p>-There was a difference of 1.2 feet (8.5 ft - 7.2 ft) between the NOAA Forecast Water Level (32 hours prior) and the Observed Water Level at the NOAA station.
+			</p>
+			<p>-There was a difference of 0.9 feet (8.5 ft - 7.6 ft) between the NOAA Forecast Water Level (32 hours prior) and the Observed Water Level at my house.
+			</b> 
+			</p>
+		
+<br>
+      <h4 class="text-left mb-1"><u>Hurricane Milton (10/10/2024)</u></h4>      <div class="row">
+        <div class="col-md-12">
+			<p><b>Helene and Milton presented similar but different hazards. Hurricane Helene brought heavy rains, wind, and significant storm surge. Hurricane Milton brought significant winds, rainfall, and reverse storm surge where water receeded out of the Tampa Bay. </b>
+			</p>
+ 
+			<p>The NOAA Extratropical Total Water Guidance issued on 9/25/2024 at 11:20 AM, which was ~32 hours prior to the storm noted a maximum water elevation of approximately ~8.5 feet Mean Sea Level (MSL). This would indicate my home at a base elevation of 6.2 feet MSL would experience ~2.3 feet of surge flooding.
+			<p>
+			
+			</p>
+
+			<p>
+
+
+
+			<p>
+			NOAA, NHC, and local weather services provide guidance on how to protect your home based on the maximum potential threats. NHC issues worst case scenario estimates to save lives and ensure people can evacuate. It is critical that you follow state and local guidelines on when you evacuate and do not use this as a justification to shelter in place when flooding could occur. The reason why this is important to follow mandatory guidelines is because hurricanes are unpredictable and tend to “wobble,” or slightly alter their path that often goes against the initial computer models.</b>
+
+
+
+			<p>
+			The difference between the predicted water level MSL and the lowest elevation of your home is the calculated size of the barriers that need to be constructed. 
+			</p>
+
+
+</section>
+
+ <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2 class="text-left mb-1">Barrier Construction</h2>
+      <h4 class="text-left mb-1"><u>How to Build Barriers</u></h4>      <div class="row">
+        <div class="col-md-12">
+			<p>How to build flood barriers
+			</p>
+			<p>Storm surge estimates often include ranges from 1-15 feet, however this estimate is not a true representation of how height the water will be at your home based on its elevation.</p>
+			<p>I used NOAA’s ETSS stn predicted water levels data to help plan and size my flood barriers. Now I want to share what I have learned to help you protect homes. 			
+			The height of storm surge will dictate the level of barrier that you should construct.</p>
+			
+						There are a wide variety of options depending on the level of barrier required:
+			</p>
+			<p>
+			The best method to sealing your home is a combination of sand bags, tarps, foam spray, caulk, flex seal, and other similar products. First examine the outside of your house and locate all openings such as exterior doors, vents, ducting, crawl spaces, etc. Develop a plan to seal each opening for example a door’s seams can be taped, a tarp placed on the exterior, interlocking sand bags, and tape the tarp in place. Each opening will require you to use your MacGyver skills. 
+			</p>
+			<p>
+			The level at which you should seal your home will depend on the level of surge or the expected total water elevation in comparison to your home. 
+			</p>
+			<p>
+			<ul>
+			<li>No flooding projected, however may want to place sand bags in case track changes.
+			</li>
+			<li>0-2 feet: Sand bags + tarp + taping seams
+			</li>
+			<li>2+ feet: Caulking door shut or foam/peal spray. 
+			</li>
+			</ul>
+			</p>
+
+			<p>
+			Low lying entries to your home: dryer vents, AC plumbing lines, cracks in exterior, new additions may experience seepage,
+			</p>
+			<br>
+      <h4 class="text-left mb-1"><u>FEMA Flood Certificates</u></h4>      <div class="row">
+        <div class="col-md-12">
+			<p>Flooding an
+			<p>
+			NOAA total prediction allows you to understand the predicted water level MSL in comparison to your home. Houses are surveyed and must report a bottom elevation. 
+			</p>
+</section>
+  <!-- Projects Section -->
+  <section id="projects" class="project-section py-4">
+    <div class="container">
+      <h2 class="text-left mb-1">Disclaimer and Safety Information</h2>
+	<div class="row">
+        <div class="col-md-12">
+			<p>Hurricane He
+			</p>
+			<p>
+			<a href="https://slosh.nws.noaa.gov/etsurge/" target="_blank">NOAA Extratropical Water Level Guidance </a><br>
+			<a href="https://www.nhc.noaa.gov/" target="_blank">National Hurricane Center</a><br>
+			<a href="https://www.nhc.noaa.gov/prepare/hazards.php" target="_blank">National Hurricane Center Hurricane Preparedness - Hazards</a><br>
+			<a href="https://www.weather.gov/safety/hurricane-plan" target="_blank">National Hurricane Center - What to Do Before the Tropical Storm or Hurricane</a><br>
+			<a href="https://www.fema.gov/about/glossary/elevation-certificate" target="_blank">FEMA Elevation Certificate - Requirement to Obtain Lowest Floor Elevation in Zone A </a><br>
+			</p>
+	
+
+
+	
   </section>
 
  <!-- Skills Section -->
