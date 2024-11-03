@@ -18,154 +18,204 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
-        /* Sticky navigation bar */
-        .navbar {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        body {
-            position: relative;
-        }
-        section {
-            padding: 15px 0;
-        }
-        .about-section {
-            padding: 10px 0;
-            text-align: left;
-        }
-        .about-section h2 {
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        .about-section .profile-img {
-            width: 100%;
-            max-width: 230px;
-            height: auto;
-            border-radius: 50%;
-            border: 5px solid #333;
-            margin-bottom: 5px;
-        }
-        .about-section .text-content {
-            max-width: 600px;
-        }
-        .about-section .text-small {
-            font-size: 0.75em;
-            max-width: 600px;
-        }
-        .project-section {
-<!--            background-color: #FAF9F6; -->
-        }
-        .project-section h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        .skills-section {
-            background-color: #FAF9F6;
-		}
-        .skills-section h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        .contact-section {
-            background-color: #2e2e2e;
-            padding: 10px 0;
-            color: white;
-        }
-        .btn-circle {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 5px;
-        }
-        .btn-silver {
-            background-color: #c0c0c0;
-            color: white;
-        }
-        .btn-silver:hover {
-            background-color: #a0a0a0;
-            color: white;
-        }
-        .social-icon {
-            width: 24px;
-            height: 24px;
-        }
-        .thumbnail-img {
-            width: 100px;
-            height: 120px;
-            border: none;
-            justify-content: center;
-        }
-        .thumbnail-text {
-            font-size: 0.75rem;
-            margin-left: 5px;
-        }
-        .thumbnail-link {
-            text-decoration: none;
-            border: none;
-            color: inherit;
-        }
-        .thumbnail-cell {
-            width: 120px;
-            height: 120px;
-            justify-content: center;
-            align-items: center;
-        }
-        .thumbnail-wrapper {
-            display: inline-block;
-        }
-        .row-cell {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .row-img {
-            width: 100px;
-            height: 150px;
-            margin-right: 10px;
-            object-fit: cover;
-            border: none;
-        }
-        .row-img2 {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            margin-right: 10px;
-            object-fit: cover;
-            border: none;
-        }
-        .row-text {
-            text-decoration: none;
-            color: inherit;
-            font-size: 1rem;
-            padding: 0px;
-            display: inline-block;
-            vertical-align: top;
-        }
-        .row-description {
-            font-size: 0.8rem;
-            margin-top: 5px;
-            text-align: center;
-        }
+
+<style>
+/* Sticky navigation bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    position: relative;
+}
+
+section {
+    padding: 15px 0;
+}
+
+/* Full-width background for sections */
+.full-width-section {
+    width: 100vw; /* Ensures full viewport width */
+    margin-left: calc(50% - 50vw); /* Centers the background across the screen */
+}
+
+/* About Section */
+.about-section {
+    padding: 10px 0;
+    text-align: left;
+    background-color: #FFFFFF; /* Set desired color */
+}
+
+.about-section h2 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.about-section .profile-img {
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #333;
+    margin-bottom: 5px;
+}
+
+.about-section .text-content {
+    max-width: 600px;
+}
+
+.about-section .text-small {
+    font-size: 0.75em;
+    max-width: 600px;
+}
+
+/* Project Section */
+.project-section {
+    background-color: #FFFFFF;
+}
+
+.project-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: #FAF9F6;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #2e2e2e;
+    color: white;
+    padding: 20px 0; /* Adjust padding as needed */
+}
+
+.contact-content {
+    max-width: 1140px; /* Matches Bootstrap container width */
+    margin: 0 auto;    /* Centers the content */
+    padding: 0 15px;   /* Adds padding for smaller screens */
+}
+
+/* Other Styles */
+.btn-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.btn-silver {
+    background-color: #c0c0c0;
+    color: white;
+}
+
+.btn-silver:hover {
+    background-color: #a0a0a0;
+    color: white;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Add the class to the sections */
+.thumbnail-img {
+    width: 100px;
+    height: 120px;
+    border: none;
+    justify-content: center;
+}
+
+/* Thumbnail Text */
+.thumbnail-text {
+    font-size: 0.75rem;
+    margin-left: 5px;
+}
+
+.thumbnail-link {
+    text-decoration: none;
+    border: none;
+    color: inherit;
+}
+
+/* Thumbnail Cell */
+.thumbnail-cell {
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail-wrapper {
+    display: inline-block;
+}
+
+.row-cell {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.row-img {
+    width: 100px;
+    height: 150px;
+    margin-right: 10px;
+    object-fit: cover;
+    border: none;
+}
+
+.row-img2 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-right: 10px;
+    object-fit: cover;
+    border: none;
+}
+
+.row-text {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.row-description {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Flexbox row styling */
 .row2 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .row2:after {
-  content: "";
-  display: table;
-  clear: both;
-} 
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /* Create three equal columns that floats next to each other */
 .column {
@@ -325,15 +375,15 @@ img.hover-shadow {
   </section>  
 
   <!-- About Section -->
-  <section id="about" class="about-section">
+  <section id="about" class="about-section full-width-section">
     <div class="container">
       <div class="row">
         <div class="col-md-4 text-center">
-          <img src="images/projects/150.jpg" alt="Profile Image" class="profile-img mb-3">
+          <img src="images/projects/helene_before_20241103_2.jpg" alt="Profile Image" class="profile-img mb-3">
           <div class="text-small">
 			<ul class="list-group text-center list-unstyled">
               <li><b>Methods: Python</li> 
-              <li>Data Analysis: Pandas, Numpy, BeautifulSoup</li>
+              <li>Data: Pandas, Numpy, BeautifulSoup</li>
 			  <li>Data Visualization: Matplotlib</li>
 			  <li>Web Development: HTML, CSS</li></b>
 			  
@@ -342,7 +392,8 @@ img.hover-shadow {
         </div>
         <div class="col-md-8">
           <div class="text-content">
-            <p><b> <h3>Defend Your Home Against Hurricanes Using Data Science</h3></b>
+            <p><b> <h3>Defend Your Home Against Hurricanes Using Data Science</h3>
+			<h5><b>-Find the Minimum Barrier Height Required For Surge Events</b></h5></b>
           <ul>
             <li>We were displaced from our Saint Petersburg Florida home after Hurricane Helene produced historic surge flooding not experienced in the Tampa Bay region for nearly 100 years. We were subsequently hit by a second major hurricane (Milton) within two weeks. </li>
 			<li><b>My home experienced 16-19” of surge surrounding the entire exterior perimeter during Hurricane Helene. However, my home only experienced 1-2" of total interior water height while my immediate neighbors experienced up to 18" total interior water height at the same approximate elevation. My home experienced 500-900% less total interior water height by utilizing readily available materials. </b>
@@ -355,104 +406,213 @@ img.hover-shadow {
 				<li><b>Compare Your Home to the Forecasted Total Water Elevation Level</b></li>
 				<li>How Does the Barrier Height Tool Work?</li>
 				<li><b>Case Study Results from Hurricane Helene and Milton</b></li>
-				<li>Barrier Construction - How to Build Barriers</li>
-				<li>FEMA Flood Certificates</li>
+				<li>How Do You Find Your Home Base Elevation?</li>
+				<li>How to Build and Upgrade Your Barriers</li>
 				<li>Disclaimer and Safety Information</b> </li>
 			</ul>
 
     </div>
   </section>
- <!-- Images used to open the lightbox -->
+ <!-- Images used to open the lightbox #1 -->
 &nbsp&nbsp<div class="row2">
-  <div class="column">
-    <img src="images/portfolio/flooding1-1.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img src="images/portfolio/flooding2-2.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img src="images/portfolio/flooding3-3.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img src="images/portfolio/flooding4-4.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-  </div>
+<div class="column">
+    <img src="images/portfolio/flooding1-1.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal1();currentSlide1(1)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/flooding2-2.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal1();currentSlide1(2)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/flooding3-3.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal1();currentSlide1(3)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/flooding4-4.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal1();currentSlide1(4)" class="hover-shadow cursor">
+</div>
 
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
+<div id="myModal1" class="modal">
+  <span class="close cursor" onclick="closeModal1()">&times;</span>
   <div class="modal-content">
-
-    <div class="mySlides">
+    <div class="mySlides1">
       <div class="numbertext">1 / 4</div>
       <img src="images/portfolio/flooding1-1.jpg" style="width:100%">
     </div>
-
-    <div class="mySlides">
+    <div class="mySlides1">
       <div class="numbertext">2 / 4</div>
       <img src="images/portfolio/flooding2-2.jpg" style="width:100%">
     </div>
-
-    <div class="mySlides">
+    <div class="mySlides1">
       <div class="numbertext">3 / 4</div>
       <img src="images/portfolio/flooding3-3.jpg" style="width:100%">
     </div>
-    
-    <div class="mySlides">
+    <div class="mySlides1">
       <div class="numbertext">4 / 4</div>
       <img src="images/portfolio/flooding4-4.jpg" style="width:100%">
     </div>
-	
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+    <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides1(1)">&#10095;</a>
     <div class="caption-container">
-      <p id="caption"></p>
+      <p id="caption1"></p>
     </div>
-
-   </div>
   </div>
 </div>
 
 <script>
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
+// JavaScript for First Gallery Modal
+function openModal1() {
+  document.getElementById("myModal1").style.display = "block";
 }
 
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
+function closeModal1() {
+  document.getElementById("myModal1").style.display = "none";
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex1 = 1;
+showSlides1(slideIndex1);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides1(n) {
+  showSlides1(slideIndex1 += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide1(n) {
+  showSlides1(slideIndex1 = n);
 }
 
-function showSlides(n) {
+function showSlides1(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  var slides = document.getElementsByClassName("mySlides1");
+  if (n > slides.length) {slideIndex1 = 1}
+  if (n < 1) {slideIndex1 = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+  slides[slideIndex1-1].style.display = "block";
+}
+
+// JavaScript for Second Gallery Modal
+function openModal2() {
+  document.getElementById("myModal2").style.display = "block";
+}
+
+function closeModal2() {
+  document.getElementById("myModal2").style.display = "none";
+}
+
+var slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+function plusSlides2(n) {
+  showSlides2(slideIndex2 += n);
+}
+
+function currentSlide2(n) {
+  showSlides2(slideIndex2 = n);
+}
+
+function showSlides2(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides2");
+  if (n > slides.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  slides[slideIndex2-1].style.display = "block";
+}
+// JavaScript for Third Gallery Modal
+function openModal3() {
+  document.getElementById("myModal3").style.display = "block";
+}
+
+function closeModal3() {
+  document.getElementById("myModal3").style.display = "none";
+}
+
+var slideIndex3 = 1;
+showSlides3(slideIndex3);
+
+function plusSlides3(n) {
+  showSlides3(slideIndex3 += n);
+}
+
+function currentSlide3(n) {
+  showSlides3(slideIndex3 = n);
+}
+
+function showSlides3(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides3");
+  if (n > slides.length) {slideIndex3 = 1}
+  if (n < 1) {slideIndex3 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex3-1].style.display = "block";
+}
+
+// JavaScript for Fourth Gallery Modal
+function openModal4() {
+  document.getElementById("myModal4").style.display = "block";
+}
+
+function closeModal4() {
+  document.getElementById("myModal4").style.display = "none";
+}
+
+var slideIndex4 = 1;
+showSlides4(slideIndex4);
+
+function plusSlides4(n) {
+  showSlides4(slideIndex4 += n);
+}
+
+function currentSlide4(n) {
+  showSlides4(slideIndex4 = n);
+}
+
+function showSlides4(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides4");
+  if (n > slides.length) {slideIndex4 = 1}
+  if (n < 1) {slideIndex4 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex4-1].style.display = "block";
+}
+
+// JavaScript for Fifth Gallery Modal
+function openModal5() {
+  document.getElementById("myModal5").style.display = "block";
+}
+
+function closeModal5() {
+  document.getElementById("myModal5").style.display = "none";
+}
+
+var slideIndex5 = 1;
+showSlides5(slideIndex5);
+
+function plusSlides5(n) {
+  showSlides5(slideIndex5 += n);
+}
+
+function currentSlide5(n) {
+  showSlides5(slideIndex5 = n);
+}
+
+function showSlides5(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides5");
+  if (n > slides.length) {slideIndex5 = 1}
+  if (n < 1) {slideIndex5 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex5-1].style.display = "block";
 }
 </script>
 <br>
   <!-- Skills Section -->
-  <section id="skills" class="skills-section">
+  <section id="skills" class="skills-section full-width-section">
     <div class="container">
       <h2 class="text-left mb-1">Barrier Height Tool</h2>
       <h4 class="text-left mb-1"><u>Compare Your Home to the Forecasted Total Water Elevation Level</u></h4>      <div class="row">
@@ -465,6 +625,51 @@ function showSlides(n) {
 			
 			<p>Please reference the <a href="https://slosh.nws.noaa.gov/etsurge/" target="_blank">NOAA Extratropical Water Level Guidance User Manual</a> for more information regarding how NOAA determines the "Total Water Guidance" variable. The "Total Water Guidance" takes into consideration tides, timing, storm surge, and recent water level observed. NOAA nor this educational tool can ultimately predict the exact water level observed during a hurricane. I did use the NOAA Extratropical Water Level to determine the height of the flood barriers to construct and will share my results. My results do not provide any guarantee, I am sharing for educational use, and I hope it can help someone. <b>The barrier height is determined by using the NOAA Extratropical Water Level Guidance Forecasted Water Level maximum for the event and subtracting your home's base elevation. A safety factor of an additional 1.5 feet is suggested and ultimately decided by the user based on their specific circumstances. </b>
 			</p>
+			
+			
+<!-- Second Set of Thumbnails -->
+<div class="column">
+    <img src="images/portfolio/flooding5-5.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal2();currentSlide2(1)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/flooding6-6.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal2();currentSlide2(2)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/flooding7-7.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal2();currentSlide2(3)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/flooding8-8.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal2();currentSlide2(4)" class="hover-shadow cursor">
+</div>
+
+<!-- Second Gallery Modal -->
+<div id="myModal2" class="modal">
+  <span class="close cursor" onclick="closeModal2()">&times;</span>
+  <div class="modal-content">
+    <div class="mySlides2">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/portfolio/flooding5-5.jpg" style="width:100%">
+    </div>
+    <div class="mySlides2">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/portfolio/flooding6-6.jpg" style="width:100%">
+    </div>
+    <div class="mySlides2">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/portfolio/flooding7-7.jpg" style="width:100%">
+    </div>
+    <div class="mySlides2">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/portfolio/flooding8-8.jpg" style="width:100%">
+    </div>
+    <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+    <div class="caption-container">
+      <p id="caption2"></p>
+    </div>
+  </div>
+</div>
+</div>
+			
       <h4 class="text-left mb-1"><u>How Does the Barrier Height Tool Work?</u> </h4>
 	  <div class="row">
         <div class="col-md-12">
@@ -483,10 +688,8 @@ function showSlides(n) {
 
   </section>
 
-
-
   <!-- Projects Section -->
-  <section id="projects" class="project-section py-4">
+  <section id="projects" class="project-section full-width-section">
     <div class="container">
       <h2 class="text-left mb-1">Case Study Results</h2><br>
       <h4 class="text-left mb-1"><u>#1 - Hurricane Helene (9/27/2024)</u></h4>      <div class="row">
@@ -507,9 +710,6 @@ function showSlides(n) {
     <li>There was a difference of 1.3 feet (8.5 ft - 7.2 ft) between the NOAA Forecast Water Level (37 hours prior) and the Observed Water Level at the NOAA station.</li>
     <li>There was a difference of 0.9 feet (8.5 ft - 7.6 ft) between the NOAA Forecast Water Level (37 hours prior) and the Observed Water Level at my house.</li>
 </ul>
-
-			</p>
-		
 		<div class="container my-2">
     <h4 class="text-center">Summary of Hurricane Helene Data Results</h4>
     <table class="table table-bordered">
@@ -551,10 +751,60 @@ function showSlides(n) {
 			<p>-<u>This is absolutely IMPRESSIVE!! I was able to use publicly available data to determine 37 hours in advance that I needed barriers at least 2.3 feet tall, which was within 0.9 feet of the measurement at home. </u>The barriers signficantly reduced the interior water as mentioned in the page's introduction, as well as the damages to my home. 
 			</b> 
 			</p>	
-		
-		
-<br>		
+
+
+
+<!-- Third Set of Thumbnails -->
+<div class="column">
+    <img src="images/portfolio/helene_before_20241103_2.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal3();currentSlide3(1)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/helene_before_20241103_1.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal3();currentSlide3(2)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/helene_after_20241103_2.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal3();currentSlide3(3)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/helene_after_20241103_1.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal3();currentSlide3(4)" class="hover-shadow cursor">
+</div>
+<!-- Third Gallery Modal -->
+<div id="myModal3" class="modal">
+  <span class="close cursor" onclick="closeModal3()">&times;</span>
+  <div class="modal-content">
+    <div class="mySlides3">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/portfolio/helene_before_20241103_2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides3">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/portfolio/helene_before_20241103_1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides3">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/portfolio/helene_after_20241103_2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides3">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/portfolio/helene_after_20241103_1.jpg" style="width:100%">
+    </div>
+    <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+    <div class="caption-container">
+      <p id="caption3"></p>
+    </div>
+  </div>
+</div>
+</div>
+<p>
+&nbsp;
 <br>
+
+		</p>
+
+		<br>
+
+
+<p>
       <h4 class="text-left mb-1"><u>#2 - Hurricane Milton (10/10/2024)</u></h4>      <div class="row">
         <div class="col-md-12">
 			<p><b>Helene and Milton presented similar but different hazards. Hurricane Helene brought heavy rains, wind, and significant storm surge. Hurricane Milton brought significant winds, rainfall, and reverse storm surge where water receeded out of the Tampa Bay. </b>
@@ -568,61 +818,54 @@ function showSlides(n) {
 			</p>
 
 
- <!-- Images used to open the lightbox -->
-&nbsp&nbsp<div class="row2">
-  <div class="column">
-    <img src="images/portfolio/flooding5-5.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img src="images/portfolio/flooding6-6.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img src="images/portfolio/flooding7-7.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img src="images/portfolio/flooding8-8.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
-  </div>
+<!-- Fourth Set of Thumbnails -->
+<div class="column">
+    <img src="images/portfolio/tropicanaMilton.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal4();currentSlide4(1)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/Flooding-MiltonPrior.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal4();currentSlide4(2)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/Flooding-MiltonAfter.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal4();currentSlide4(3)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/miltonStPete.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal4();currentSlide4(4)" class="hover-shadow cursor">
+</div>
 
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
+<!-- Fourth Gallery Modal -->
+<div id="myModal4" class="modal">
+  <span class="close cursor" onclick="closeModal4()">&times;</span>
   <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 8</div>
-      <img src="images/portfolio/flooding5-5.jpg" style="width:100%">
+    <div class="mySlides4">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/portfolio/tropicanaMilton.jpg" style="width:100%">
     </div>
-
-    <div class="mySlides">
-      <div class="numbertext">6 / 8</div>
-      <img src="images/portfolio/flooding6-6.jpg" style="width:100%">
+    <div class="mySlides4">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/portfolio/Flooding-MiltonPrior.jpg" style="width:100%">
     </div>
-
-    <div class="mySlides">
-      <div class="numbertext">7 / 8</div>
-      <img src="images/portfolio/flooding7-7.jpg" style="width:100%">
+    <div class="mySlides4">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/portfolio/Flooding-MiltonAfter.jpg" style="width:100%">
     </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">8 / 8</div>
-      <img src="images/portfolio/flooding8-8.jpg" style="width:100%">
+    <div class="mySlides4">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/portfolio/miltonStPete.jpg" style="width:100%">
     </div>
-	
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+    <a class="prev" onclick="plusSlides4(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides4(1)">&#10095;</a>
     <div class="caption-container">
-      <p id="caption"></p>
+      <p id="caption4"></p>
     </div>
-
-   </div>
   </div>
 </div>
+
 
 
 </section>
 
  <!-- Skills Section -->
-  <section id="skills" class="skills-section">
+  <section id="skills" class="skills-section full-width-section">
     <div class="container">
       <h2 class="text-left mb-1">Defend Your Home</h2>
       <h4 class="text-left mb-1"><u>Home Base Elevation Identification</u></h4>      <div class="row">
@@ -651,6 +894,52 @@ function showSlides(n) {
 		</ul>				 
 			</p>
 
+
+<!-- Fifth Gallery Modal -->
+<div id="myModal5" class="modal">
+  <span class="close cursor" onclick="closeModal5()">&times;</span>
+  <div class="modal-content">
+    <div class="mySlides5">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/portfolio/flooding17-17.jpg" style="width:100%">
+    </div>
+    <div class="mySlides5">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/portfolio/flooding18-18.jpg" style="width:100%">
+    </div>
+    <div class="mySlides5">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/portfolio/flooding19-19.jpg" style="width:100%">
+    </div>
+    <div class="mySlides5">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/portfolio/flooding20-20.jpg" style="width:100%">
+    </div>
+    <a class="prev" onclick="plusSlides5(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides5(1)">&#10095;</a>
+    <div class="caption-container">
+      <p id="caption5"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Fifth Set of Thumbnails -->
+<div class="column">
+    <img src="images/portfolio/flooding17-17.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal5();currentSlide5(1)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/flooding18-18.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal5();currentSlide5(2)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/flooding19-19.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal5();currentSlide5(3)" class="hover-shadow cursor">
+</div>
+<div class="column">
+    <img src="images/portfolio/flooding20-20.jpg" style="width:100%; height: auto; object-fit: cover;" onclick="openModal5();currentSlide5(4)" class="hover-shadow cursor">
+</div>
+
+</div>
+</div>
+
 <br>
 
  <h4 class="text-left mb-1"><u>How to Build Barriers</u></h4>      <div class="row">
@@ -672,7 +961,7 @@ function showSlides(n) {
 			<li><b>Tape, Foam Spray, Caulk to Seal Openings</b> - Use tape or foam spray in order to seal all cracks for doors, door frames, garage doors, vents, and other openings to your house. Every entry makes your home vulnerable to water intrusion.</li>
 			<li><b>Tape Plastic Over Small Openings</b> - Consider using plastic and tape into place to fill gaps and other areas water may enter. </li>
 			<li><b>Products with Reported Success</b> - Duct tape, painters tape, gorilla tape, flex seal tape, flex seal spray, and other similar products. <b>I have used duct tape, painters tape, gorilla tape, foam spray, and caulk depending on the water height anticipated.</b></li>
-			<li>Other elevations</li>
+			<li><b>Tape the Seams of Everything!</b> - Yes, anywhere water can enter or get past the barrier needs to be sealed.</li>
 		</ul>
 			<b><u>Which Method Should I Use?</b></u>
 			<p>Storm surge estimates often include ranges from 1-15 feet, however this estimate is not a true representation of how height the water will be at your home based on its elevation. I used NOAA’s ETSS to estimate the minimum barrier height I needed before Hurricane Helene. It is ultimately up to each person how to protect their home and how they want to proceed. <b>Here are some ideas for how I protect my home (subject to change)</b>: 
@@ -699,7 +988,7 @@ function showSlides(n) {
 			
 </section>
   <!-- Projects Section -->
-  <section id="projects" class="project-section py-4">
+  <section id="projects" class="project-section full-width-section">
     <div class="container">
       <h2 class="text-left mb-1">Disclaimer and Safety Information</h2>
 	<div class="row">
@@ -740,7 +1029,7 @@ function showSlides(n) {
   </section> -->
   
   <!-- Contact Section -->
-<section id="contact" class="contact-section">
+<section id="contact" class="contact-section full-width-section">
     <div class="container">
         <br>
         <h2 class="text-left">Contact</h2>
